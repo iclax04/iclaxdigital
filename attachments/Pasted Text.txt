@@ -1,0 +1,310 @@
+Act as a senior professional website designer, full-stack web developer, UI/UX designer and digital marketing expert.
+
+I want you to design and build a complete, modern, premium and fully responsive business website for my digital marketing agency called ICLAX DIGITAL.
+
+The website must look like it was designed by an established international digital marketing agency. It should be visually impressive, professional, fast, mobile-friendly and conversion-focused.
+
+IMPORTANT: Do not include any service prices, pricing tables, subscription fees or package prices anywhere on the website. Visitors should be encouraged to contact us for customised quotations.
+
+1. COMPANY INFORMATION
+
+Business Name: ICLAX DIGITAL
+
+Industry: Digital Marketing, Website Development and Digital Solutions.
+
+Brand Identity: Innovation, Creativity, Leadership, Advertising and Excellence.
+
+Tagline: INNOVATING YOUR DIGITAL GROWTH.
+
+Business Location: Nigeria.
+
+Target Audience:
+	•	Small and medium-sized businesses.
+	•	Startups and entrepreneurs.
+	•	Real estate companies.
+	•	Hotels and restaurants.
+	•	Fashion brands.
+	•	Retail businesses.
+	•	Corporate organisations.
+	•	Businesses looking to expand their online presence.
+
+2. BRAND DESIGN AND COLOURS
+
+Create a premium corporate technology-inspired design.
+
+Primary colours:
+	•	Deep black.
+	•	Luxury gold.
+	•	White.
+	•	Subtle dark grey.
+
+Use gold as an accent colour for buttons, headings, icons and important elements.
+
+The website should have:
+	•	Elegant typography.
+	•	Beautiful animations.
+	•	Smooth scrolling.
+	•	Modern layouts.
+	•	Professional icons.
+	•	Premium background effects.
+	•	High-quality business imagery.
+	•	Subtle hover effects.
+	•	Attractive section transitions.
+
+Avoid cluttered layouts and excessive animations.
+
+3. WEBSITE PAGES AND STRUCTURE
+
+Create the following pages:
+
+HOME PAGE
+
+Include:
+
+A premium hero section with a powerful headline:
+
+“YOUR BUSINESS DESERVES TO BE SEEN.”
+
+Supporting text:
+
+“We help businesses attract more customers, build powerful online brands and achieve sustainable growth through innovative digital marketing and technology solutions.”
+
+Add two prominent buttons:
+	•	GET STARTED
+	•	EXPLORE OUR SERVICES
+
+Use professional visuals showing Nigerian business owners, digital marketing professionals, modern offices, website dashboards and successful entrepreneurs.
+
+Include:
+	•	Introduction to ICLAX Digital.
+	•	Our core services.
+	•	Why businesses should choose us.
+	•	Our working process.
+	•	Industries we serve.
+	•	A strong call-to-action section.
+	•	Client testimonials section with clearly identified sample placeholders, not fabricated real reviews.
+
+ABOUT US PAGE
+
+Introduce ICLAX Digital as a digital growth agency helping businesses establish their online presence and compete in the modern digital economy.
+
+Include:
+	•	Who We Are.
+	•	Our Mission.
+	•	Our Vision.
+	•	Our Values.
+	•	Our Approach.
+	•	Why Choose ICLAX Digital.
+
+Mission:
+
+“To empower businesses with innovative digital solutions that improve visibility, strengthen customer relationships and drive business growth.”
+
+Vision:
+
+“To become a trusted digital growth partner for businesses across Africa and beyond.”
+
+OUR SERVICES PAGE
+
+Create attractive individual service sections for:
+	1.	GOOGLE ADS MANAGEMENT
+
+	•	Google Search Ads.
+	•	Google Display Advertising.
+	•	YouTube Ads.
+	•	Keyword Research.
+	•	Campaign Setup.
+	•	Campaign Optimisation.
+	•	Conversion Tracking.
+	•	Performance Reporting.
+
+	2.	WEBSITE DESIGN & DEVELOPMENT
+
+	•	Business Websites.
+	•	Corporate Websites.
+	•	E-commerce Websites.
+	•	Landing Pages.
+	•	Portfolio Websites.
+	•	Mobile-Responsive Design.
+	•	Website Redesign.
+	•	Website Maintenance.
+
+	3.	SEARCH ENGINE OPTIMISATION (SEO)
+
+	•	Technical SEO.
+	•	On-page SEO.
+	•	Keyword Research.
+	•	Website Audits.
+	•	Local SEO.
+	•	Content Optimisation.
+	•	Google Search Visibility.
+
+	4.	SOCIAL MEDIA MANAGEMENT
+
+	•	Facebook Management.
+	•	Instagram Management.
+	•	TikTok Management.
+	•	LinkedIn Management.
+	•	Content Creation.
+	•	Graphic Design.
+	•	Promotional Videos.
+	•	Content Scheduling.
+	•	Audience Engagement.
+
+	5.	FACEBOOK & INSTAGRAM ADVERTISING
+
+	•	Facebook Ads.
+	•	Instagram Ads.
+	•	Lead Generation.
+	•	WhatsApp Advertising.
+	•	Sales Campaigns.
+	•	Audience Targeting.
+	•	Retargeting.
+	•	Campaign Optimisation.
+
+	6.	GOOGLE BUSINESS PROFILE MANAGEMENT
+
+	•	Business Profile Setup.
+	•	Profile Optimisation.
+	•	Google Maps Visibility.
+	•	Business Information Management.
+	•	Review Management Support.
+	•	Local Search Optimisation.
+
+	7.	BRANDING & CREATIVE DESIGN
+
+	•	Logo Design.
+	•	Brand Identity.
+	•	Promotional Flyers.
+	•	Business Banners.
+	•	Marketing Graphics.
+	•	Brand Guidelines.
+
+	8.	AI VIDEO ADVERTISING
+
+	•	AI Promotional Videos.
+	•	Business Commercials.
+	•	Product Advertisement Videos.
+	•	Social Media Reels.
+	•	Explainer Videos.
+
+Every service should have its own professional description, benefits and a CONTACT US button.
+
+WHY CHOOSE US PAGE/SECTION
+
+Highlight these benefits:
+	•	Professional digital marketing strategies.
+	•	Creative and modern solutions.
+	•	Customer-focused approach.
+	•	Data-driven advertising.
+	•	Transparent performance reporting.
+	•	Affordable customised solutions.
+	•	Dedicated client support.
+	•	Multiple digital services under one roof.
+
+OUR PROCESS SECTION
+
+Explain our five-step working process:
+	1.	Discovery – We understand your business and objectives.
+	2.	Strategy – We develop a suitable digital strategy.
+	3.	Implementation – We execute the agreed services.
+	4.	Optimisation – We monitor and improve performance.
+	5.	Reporting – We provide progress reports and recommendations.
+
+CONTACT US PAGE
+
+Create a professional contact page with:
+	•	Full Name.
+	•	Business Name.
+	•	Email Address.
+	•	Phone Number.
+	•	Service Required.
+	•	Project Description.
+	•	Submit Enquiry button.
+
+Include:
+	•	WhatsApp contact button.
+	•	Business email placeholder.
+	•	Phone number placeholder.
+	•	Social media links.
+	•	Business location: Nigeria.
+
+Add a WhatsApp floating button that allows visitors to contact the agency directly.
+
+4. WEBSITE FUNCTIONALITY
+
+The website must have:
+	•	Fully responsive desktop, tablet and mobile layouts.
+	•	Functional navigation menu.
+	•	Working contact forms.
+	•	WhatsApp integration.
+	•	Clickable email and phone links.
+	•	Smooth scrolling.
+	•	SEO-friendly page structure.
+	•	Fast loading speed.
+	•	Google Analytics integration placeholder.
+	•	Google Search Console verification placeholder.
+	•	Social media integration.
+	•	Professional footer.
+	•	Privacy Policy page.
+	•	Terms and Conditions page.
+
+5. IMPORTANT MARKETING REQUIREMENTS
+
+The website must be designed to convert visitors into potential clients.
+
+Use strong calls to action throughout the website, including:
+	•	LET’S GROW YOUR BUSINESS.
+	•	GET A FREE CONSULTATION.
+	•	REQUEST A QUOTE.
+	•	TALK TO OUR TEAM.
+	•	START YOUR PROJECT.
+
+Do not display any prices.
+
+Where visitors want to know the cost of a service, direct them to contact ICLAX Digital for a personalised quotation.
+
+6. IMAGES AND VISUALS
+
+Use realistic, premium-quality photographs showing African and Nigerian business environments.
+
+Include:
+	•	Nigerian entrepreneurs.
+	•	Modern Nigerian offices.
+	•	Digital marketing professionals.
+	•	Business owners using laptops.
+	•	Nigerian retail stores.
+	•	Fashion businesses.
+	•	Restaurants and hospitality businesses.
+	•	Professional website development environments.
+	•	Social media marketing activities.
+
+Avoid cartoon images, generic illustrations and unrealistic AI-looking people.
+
+7. TECHNICAL REQUIREMENTS
+
+Build the actual working website, not just a design concept.
+
+Use a modern, reliable technology stack.
+
+If using React, use clean reusable components and a professional responsive CSS framework.
+
+Ensure:
+	•	All navigation links work.
+	•	All buttons have appropriate actions.
+	•	Contact forms are functional or clearly connected to a configurable submission service.
+	•	No broken images.
+	•	No placeholder text left in the finished website except business contact details I need to supply.
+	•	Clean, organised and maintainable code.
+
+If you cannot deploy the website directly, provide all the complete source code and clear deployment instructions.
+
+FINAL INSTRUCTION
+
+Create a website that makes ICLAX DIGITAL look like a reputable, established and premium digital marketing agency.
+
+The final result must be beautiful, professional, persuasive and ready for real business use.
+
+Do not include pricing anywhere.
+
+Prioritise quality, functionality, mobile responsiveness, professional Nigerian business imagery and customer conversion.

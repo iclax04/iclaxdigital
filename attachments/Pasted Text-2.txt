@@ -1,0 +1,187 @@
+Nigerian Website Design Update Prompt” id=“92741”}
+I want you to redesign the ICLAX DIGITAL website to reflect a modern, professional Nigerian digital marketing agency.
+
+IMPORTANT: I do not want a generic American or European-looking digital agency website.
+
+I want a website that Nigerian entrepreneurs, business owners, startups and companies can immediately relate to and trust.
+
+The website should have a modern Nigerian corporate identity, inspired by successful Nigerian technology companies, fintech brands and professional business websites.
+
+1. BRAND COLOURS
+
+Use a Nigerian-inspired colour palette:
+
+Primary green: #008751
+Deep green: #006B40
+White: #FFFFFF
+Navy blue: #102A43
+Gold accent: #D9A441
+Light background: #F4F7F5
+
+Use green as the dominant brand colour.
+
+Use white for clean backgrounds, navy blue for professional sections and gold for subtle highlights.
+
+Do not make the entire website dark.
+
+The overall appearance should be bright, welcoming, energetic and professional.
+
+2. WEBSITE PERSONALITY
+
+The website should communicate:
+	•	Trust.
+	•	Professionalism.
+	•	Innovation.
+	•	Business growth.
+	•	Creativity.
+	•	Reliability.
+	•	Local understanding.
+	•	International-quality digital services.
+
+Make Nigerian business owners feel that this agency understands their challenges and opportunities.
+
+3. HOMEPAGE DESIGN
+
+Create an impressive homepage with this headline:
+
+“LET’S GROW YOUR BUSINESS BEYOND LIMITS.”
+
+Supporting text:
+
+“Your business deserves to be seen. At ICLAX Digital, we help Nigerian businesses attract customers, build powerful online brands and grow through innovative digital marketing and technology solutions.”
+
+Add two buttons:
+
+GET STARTED
+EXPLORE OUR SERVICES
+
+Use a large, high-quality photograph of Nigerian male and female business professionals working together in a modern Nigerian office.
+
+Include subtle green background shapes and modern visual effects.
+
+4. NIGERIAN BUSINESS IMAGERY
+
+This is extremely important.
+
+Use realistic, high-quality images of actual Nigerian and African-looking business environments.
+
+Include:
+	•	Nigerian entrepreneurs.
+	•	Nigerian fashion businesses.
+	•	Nigerian restaurant owners.
+	•	Nigerian real estate professionals.
+	•	Nigerian supermarkets.
+	•	Nigerian beauty salons.
+	•	Nigerian technology professionals.
+	•	Nigerian business meetings.
+	•	Nigerian retail stores.
+	•	Nigerian small business owners using smartphones and laptops.
+
+Avoid Western-looking business stock photographs where possible.
+
+The images should look authentic, relatable and professionally photographed.
+
+5. SERVICES
+
+Display the following services using modern cards, green icons and attractive illustrations or photographs:
+	1.	Google Ads Management.
+	2.	Website Design & Development.
+	3.	Search Engine Optimisation (SEO).
+	4.	Social Media Management.
+	5.	Facebook & Instagram Advertising.
+	6.	Google Business Profile Management.
+	7.	Branding & Graphic Design.
+	8.	AI Promotional Video Production.
+
+Each service should have a short explanation, key benefits and a CONTACT US button.
+
+6. TRUST AND CREDIBILITY
+
+Add a section titled:
+
+“WE UNDERSTAND THE NIGERIAN BUSINESS MARKET.”
+
+Explain that ICLAX Digital helps Nigerian businesses improve their online visibility, reach customers and compete in an increasingly digital economy.
+
+Include a section for industries we serve:
+	•	Real Estate.
+	•	Hospitality.
+	•	Fashion.
+	•	Retail.
+	•	Restaurants.
+	•	Education.
+	•	Technology.
+	•	Professional Services.
+
+Do not invent customer testimonials, client logos, company awards or statistics.
+
+Use clearly labelled placeholders until genuine client information is available.
+
+7. CALL TO ACTION
+
+Use strong Nigerian-market-friendly language:
+
+“Ready to Take Your Business Online?”
+
+“Let’s Help Your Business Get Noticed.”
+
+“Your Next Customer Could Be Searching for You Right Now.”
+
+“Let’s Build Something Great Together.”
+
+Add WhatsApp contact integration.
+
+8. WEBSITE NAVIGATION
+
+Home
+About Us
+Our Services
+Industries We Serve
+Our Portfolio
+Contact Us
+
+9. IMPORTANT DESIGN REQUIREMENTS
+	•	Fully responsive on mobile phones.
+	•	Professional desktop and tablet layouts.
+	•	Fast loading.
+	•	Modern typography.
+	•	Smooth animations.
+	•	Green CTA buttons.
+	•	Clean white backgrounds.
+	•	Professional navigation.
+	•	SEO-friendly structure.
+	•	Functional contact form.
+	•	WhatsApp floating button.
+	•	Google Maps integration placeholder.
+	•	Social media links.
+
+Do not display any service prices or pricing packages.
+
+FINAL DESIGN DIRECTION
+
+The final website should look like a leading Nigerian digital marketing and technology agency.
+
+It should combine the vibrant identity of Nigerian businesses with the clean design and functionality of an international technology company.
+
+Make it visually impressive, trustworthy, conversion-focused and ready for real Nigerian customers.
+
+Build the actual working website, not just a visual mockup.
+:::
+
+4. My final branding advice
+
+I would settle on this identity:
+
+Brand: ICLAX DIGITAL
+
+Tagline: Innovating Your Digital Growth.
+
+Primary colour: Nigerian green.
+
+Secondary colour: White.
+
+Professional colour: Navy blue.
+
+Accent: Gold.
+
+One more thing: Don’t use the Nigerian flag everywhere. The goal is to create a Nigerian business identity through the colours, imagery, language and local relevance, not make the website look like a government portal.

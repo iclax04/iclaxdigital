@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ICLAX DIGITAL | Innovating Your Digital Growth",
+      "hasCanvas": false,
+      "bodyTextLen": 6047,
+      "bodyTextHash": "9c46dd69b6e28a86d831ca994dee620349a05fc7744d010ad9c881214c9b552c",
+      "bodyTextPrefix": "Skip to content I ICLAX DIGITAL About Services Why us Contact FR",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ICLAX DIGITAL | Innovating Your Digital Growth",
+      "hasCanvas": false,
+      "bodyTextLen": 6027,
+      "bodyTextHash": "31033c8085eb0a48f3a7a7128604234113ca934af2c947566ac7690e935d356d",
+      "bodyTextPrefix": "Skip to content I ICLAX DIGITAL FREE CONSULTATION Open menu ICLA",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
