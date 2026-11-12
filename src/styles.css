@@ -88,13 +88,11 @@
   }
 }
 
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
+@media (min-width: 1024px) {
+  h1,
+  h2 {
+    font-family: "Libre Baskerville", Georgia, serif;
+    font-weight: 700;
+    letter-spacing: 0;
   }
 }

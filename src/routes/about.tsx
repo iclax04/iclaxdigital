@@ -29,7 +29,7 @@ function AboutPage() {
           <img
             src="/images/ng-founders.jpg"
             alt="Two businesswomen working with laptops"
-            className="aspect-[4/3] w-full rounded-3xl object-cover"
+            className="aspect-[4/3] w-full rounded-3xl border border-line object-cover lg:rounded-none"
           />
         </Container>
       </section>

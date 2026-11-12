@@ -72,7 +72,7 @@ function Home() {
           <img
             src="/images/ng-founders.jpg"
             alt="Two Nigerian businesswomen in Lagos holding laptops"
-            className="aspect-[4/5] w-full object-cover object-center sm:aspect-[5/4] lg:aspect-[4/5]"
+            className="aspect-[4/5] w-full object-cover object-center sm:aspect-[5/4] lg:aspect-[5/4] lg:border lg:border-line"
           />
         </Container>
       </section>
@@ -82,7 +82,7 @@ function Home() {
           <h2 className="max-w-2xl font-display text-3xl font-extrabold leading-tight text-ink md:text-4xl">
             The work that helps a business get noticed.
           </h2>
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-px lg:border lg:border-line lg:bg-line">
             {services.map((service) => {
               const Icon = serviceIcons[service.slug as keyof typeof serviceIcons];
               return (
@@ -90,7 +90,7 @@ function Home() {
                   <Link
                     to="/services/$slug"
                     params={{ slug: service.slug }}
-                    className="flex h-full flex-col rounded-xl border border-line bg-white p-6 transition-colors hover:border-ink"
+                    className="flex h-full flex-col rounded-xl border border-line bg-white p-6 transition-colors hover:border-ink lg:rounded-none lg:border-0 lg:p-8"
                   >
                     <Icon className="size-6 text-ink" aria-hidden="true" />
                     <h3 className="mt-5 font-display text-lg font-bold text-ink">{service.title}</h3>
@@ -108,7 +108,7 @@ function Home() {
           <img
             src="/images/ng-abuja-desk.jpg"
             alt="A Nigerian woman working at her desk in Abuja"
-            className="aspect-[4/3] w-full object-cover"
+            className="aspect-[4/3] w-full border border-line object-cover lg:border-line"
           />
           <div>
             <h2 className="font-display text-4xl font-extrabold leading-tight text-ink md:text-5xl">
@@ -128,10 +128,10 @@ function Home() {
       </section>
 
       <section className="border-y border-line bg-white" aria-label="What ICLAX stands for">
-        <ul className="mx-auto grid max-w-6xl sm:grid-cols-2 lg:grid-cols-5">
+        <ul className="mx-auto grid max-w-6xl sm:grid-cols-2 lg:max-w-7xl lg:grid-cols-5">
           {values.map((value) => (
             <li key={value.letter} className="border-t border-line px-6 py-8 sm:border-t-0 lg:border-l lg:first:border-l-0">
-              <span className="font-display text-3xl font-extrabold text-ink">{value.letter}</span>
+              <span className="font-logo text-3xl font-bold text-ink">{value.letter}</span>
               <h3 className="mt-3 text-sm font-semibold text-ink">{value.word}</h3>
               <p className="mt-2 text-sm leading-relaxed text-quiet">{value.text}</p>
             </li>
@@ -155,7 +155,7 @@ function Home() {
           <ul className="mt-12 grid grid-cols-2 gap-3 lg:grid-cols-4">
             {industries.map((industry) => (
               <li key={industry.title}>
-                <Link to="/industries" className="group relative block aspect-[3/4] overflow-hidden rounded-2xl bg-ink">
+                <Link to="/industries" className="group relative block aspect-[3/4] overflow-hidden rounded-2xl bg-ink lg:aspect-[4/5] lg:rounded-none">
                   <img
                     src={industry.image}
                     alt={industry.alt}

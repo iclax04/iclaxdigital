@@ -32,7 +32,7 @@ function WhyPage() {
           <img
             src="/images/ng-lagos-suit.jpg"
             alt="A Nigerian businessman photographed in Lagos"
-            className="aspect-[4/3] w-full rounded-3xl object-cover"
+            className="aspect-[4/3] w-full rounded-3xl border border-line object-cover lg:rounded-none"
           />
         </Container>
       </section>
