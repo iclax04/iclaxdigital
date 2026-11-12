@@ -16,7 +16,7 @@ function IndustriesPage() {
   return (
     <main id="content">
       <section className="relative overflow-hidden border-b border-line bg-white">
-        <div className="pointer-events-none absolute -left-16 top-0 h-48 w-48 rounded-full bg-gold/20 lg:hidden" aria-hidden="true" />
+        <div className="pointer-events-none absolute -left-16 top-0 h-48 w-48 rounded-full bg-gold/20" aria-hidden="true" />
         <Container className="relative py-16 md:py-20">
           <Eyebrow>Industries we serve</Eyebrow>
           <h1 className="max-w-3xl font-display text-4xl font-extrabold leading-tight text-ink md:text-6xl">
@@ -30,7 +30,7 @@ function IndustriesPage() {
       <section className="bg-paper">
         <Container className="grid gap-6 py-16 md:grid-cols-2 md:py-24">
           {industries.map((industry) => (
-            <article key={industry.title} className="overflow-hidden border border-line bg-white lg:rounded-none rounded-2xl">
+            <article key={industry.title} className="overflow-hidden rounded-2xl border border-line bg-white">
               <img src={industry.image} alt={industry.alt} className="aspect-[16/9] w-full object-cover" />
               <div className="p-6">
                 <h2 className="font-display text-3xl font-bold text-ink">{industry.title}</h2>

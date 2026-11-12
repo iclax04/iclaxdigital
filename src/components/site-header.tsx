@@ -41,12 +41,12 @@ export function SiteHeader() {
       >
         Skip to content
       </a>
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-8 px-5 md:px-8 lg:max-w-7xl">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-5 md:px-8">
         <Link to="/" aria-label="ICLAX Digital home">
           <Logo />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
           {links.map((link) => {
             const active = link.to === "/" ? pathname === "/" : pathname.startsWith(link.to);
             return (
@@ -62,6 +62,14 @@ export function SiteHeader() {
               </Link>
             );
           })}
+          <a
+            href={contactWhatsApp}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm font-medium text-ink transition-colors hover:text-gold"
+          >
+            Contact Us
+          </a>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -70,7 +78,7 @@ export function SiteHeader() {
           </a>
           <button
             type="button"
-            className="grid h-11 w-11 place-items-center rounded-md border border-line text-ink lg:hidden"
+            className="grid h-11 w-11 place-items-center border border-line text-ink lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((value) => !value)}
@@ -81,8 +89,25 @@ export function SiteHeader() {
         </div>
       </div>
 
+      <nav className="hidden border-t border-line md:block lg:hidden" aria-label="Primary">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-8 py-3">
+          {links.map((link) => {
+            const active = link.to === "/" ? pathname === "/" : pathname.startsWith(link.to);
+            return (
+              <Link
+                key={link.to}
+                to={link.to}
+                className={cn("text-sm font-medium text-ink hover:text-gold", active && "font-semibold text-gold")}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </div>
+      </nav>
+
       {open ? (
-        <div id="mobile-menu" className="border-t border-line bg-white lg:hidden">
+        <div id="mobile-menu" className="border-t border-line bg-white md:hidden">
           <nav className="mx-auto flex max-w-6xl flex-col px-5 py-3" aria-label="Mobile">
             {links.map((link) => (
               <Link key={link.to} to={link.to} className="border-b border-line py-4 text-base font-medium text-ink">

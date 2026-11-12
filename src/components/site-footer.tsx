@@ -11,7 +11,7 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-line bg-ink text-ivory">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-12 md:px-8 lg:max-w-7xl">
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-12 md:px-8">
         <div className={onHome ? "md:col-span-6" : "md:col-span-4"}>
           <Logo tone="light" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-fog">
@@ -105,7 +105,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-line">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 text-xs text-fog md:flex-row md:items-center md:justify-between md:px-8 lg:max-w-7xl">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 text-xs text-fog md:flex-row md:items-center md:justify-between md:px-8">
           <p>© {new Date().getFullYear()} ICLAX Digital. All rights reserved.</p>
           <p>Quotations are prepared for each business. We do not publish prices.</p>
         </div>

@@ -51,50 +51,61 @@ function Home() {
     <main id="content">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      <section className="bg-white">
-        <Container className="grid items-center gap-10 py-10 md:py-16 lg:grid-cols-2 lg:py-20">
-          <div>
-            <h1 className="font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+      <section className="relative isolate min-h-[32rem] overflow-hidden md:min-h-[40rem]">
+        <img
+          src="/images/ng-founders.jpg"
+          alt="Two Nigerian businesswomen in Lagos holding laptops"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-ink/60 md:bg-gradient-to-r md:from-ink/80 md:via-ink/55 md:to-ink/25" aria-hidden="true" />
+        <Container className="relative flex min-h-[32rem] items-center py-16 md:min-h-[40rem] md:py-24">
+          <div className="max-w-3xl">
+            <h1 className="font-logo text-4xl font-bold leading-[1.08] text-white sm:text-5xl md:text-6xl">
               Let's grow your business <span className="text-gold">beyond</span> limits.
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-quiet md:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/90 md:text-lg">
               Your business deserves to be seen. At ICLAX Digital, we help businesses attract customers, build powerful online brands and grow through innovative digital marketing and technology solutions.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={contactWhatsApp} target="_blank" rel="noreferrer" className={btnPrimary}>
+              <a
+                href={contactWhatsApp}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex min-h-11 items-center justify-center bg-white px-6 text-center text-sm font-semibold text-ink hover:bg-paper"
+              >
                 Contact us
               </a>
-              <Link to="/services" className={btnGhost}>
+              <Link
+                to="/services"
+                className="inline-flex min-h-11 items-center justify-center border border-white bg-white px-6 text-center text-sm font-semibold text-ink hover:bg-paper"
+              >
                 Explore our services
               </Link>
             </div>
           </div>
-          <img
-            src="/images/ng-founders.jpg"
-            alt="Two Nigerian businesswomen in Lagos holding laptops"
-            className="aspect-[4/5] w-full object-cover object-center sm:aspect-[5/4] lg:aspect-[5/4] lg:border lg:border-line"
-          />
         </Container>
       </section>
 
       <section className="bg-white" id="services">
         <Container className="py-6 pb-16 md:pb-24">
-          <h2 className="max-w-2xl font-display text-3xl font-extrabold leading-tight text-ink md:text-4xl">
+          <h2 className="max-w-2xl font-logo text-3xl font-bold leading-snug text-ink sm:text-4xl">
             The work that helps a business get noticed.
           </h2>
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-px lg:border lg:border-line lg:bg-line">
-            {services.map((service) => {
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, index) => {
               const Icon = serviceIcons[service.slug as keyof typeof serviceIcons];
+              const navy = index % 2 === 0;
               return (
                 <li key={service.slug}>
                   <Link
                     to="/services/$slug"
                     params={{ slug: service.slug }}
-                    className="flex h-full flex-col rounded-xl border border-line bg-white p-6 transition-colors hover:border-ink lg:rounded-none lg:border-0 lg:p-8"
+                    className={`flex h-full flex-col border p-6 ${navy ? "border-ink bg-ink text-white" : "border-gold bg-white text-ink"}`}
                   >
-                    <Icon className="size-6 text-ink" aria-hidden="true" />
-                    <h3 className="mt-5 font-display text-lg font-bold text-ink">{service.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-quiet">{service.short}</p>
+                    <span className="block h-1 w-12 bg-gold" aria-hidden="true" />
+                    <Icon className={`mt-5 size-6 ${navy ? "text-gold" : "text-ink"}`} aria-hidden="true" />
+                    <h3 className={`mt-5 font-display text-lg font-bold ${navy ? "text-white" : "text-ink"}`}>{service.title}</h3>
+                    <p className={`mt-2 text-sm leading-relaxed ${navy ? "text-white" : "text-ink"}`}>{service.short}</p>
                   </Link>
                 </li>
               );
@@ -104,14 +115,14 @@ function Home() {
       </section>
 
       <section className="bg-white">
-        <Container className="grid items-center gap-10 py-8 pb-16 lg:grid-cols-2 md:pb-24">
+        <Container className="grid items-center gap-10 py-8 pb-16 md:grid-cols-2 md:pb-24">
           <img
             src="/images/ng-abuja-desk.jpg"
             alt="A Nigerian woman working at her desk in Abuja"
-            className="aspect-[4/3] w-full border border-line object-cover lg:border-line"
+            className="aspect-[4/3] w-full object-cover"
           />
           <div>
-            <h2 className="font-display text-4xl font-extrabold leading-tight text-ink md:text-5xl">
+            <h2 className="font-logo text-3xl font-bold leading-snug text-ink sm:text-4xl">
               Built for how customers actually decide.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-body md:text-lg">
@@ -128,9 +139,9 @@ function Home() {
       </section>
 
       <section className="border-y border-line bg-white" aria-label="What ICLAX stands for">
-        <ul className="mx-auto grid max-w-6xl sm:grid-cols-2 lg:max-w-7xl lg:grid-cols-5">
+        <ul className="mx-auto grid max-w-6xl sm:grid-cols-2 md:grid-cols-5">
           {values.map((value) => (
-            <li key={value.letter} className="border-t border-line px-6 py-8 sm:border-t-0 lg:border-l lg:first:border-l-0">
+            <li key={value.letter} className="border-t border-line px-6 py-8 sm:border-t-0 md:border-l md:first:border-l-0">
               <span className="font-logo text-3xl font-bold text-ink">{value.letter}</span>
               <h3 className="mt-3 text-sm font-semibold text-ink">{value.word}</h3>
               <p className="mt-2 text-sm leading-relaxed text-quiet">{value.text}</p>
@@ -144,7 +155,7 @@ function Home() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <Eyebrow>Industries we serve</Eyebrow>
-              <h2 className="font-display text-4xl font-extrabold leading-tight text-ink md:text-5xl">
+              <h2 className="font-logo text-3xl font-bold leading-snug text-ink sm:text-4xl">
                 Built for businesses, wherever your customers are.
               </h2>
             </div>
@@ -152,10 +163,10 @@ function Home() {
               See all industries
             </Link>
           </div>
-          <ul className="mt-12 grid grid-cols-2 gap-3 lg:grid-cols-4">
+          <ul className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
             {industries.map((industry) => (
               <li key={industry.title}>
-                <Link to="/industries" className="group relative block aspect-[3/4] overflow-hidden rounded-2xl bg-ink lg:aspect-[4/5] lg:rounded-none">
+                <Link to="/industries" className="group relative block aspect-[3/4] overflow-hidden bg-ink md:aspect-[4/5]">
                   <img
                     src={industry.image}
                     alt={industry.alt}

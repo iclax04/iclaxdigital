@@ -7,7 +7,7 @@ export function ServiceArticle({ service, index }: { service: Service; index: nu
   return (
     <article id={service.slug} className="scroll-mt-28 border-t border-mist py-16 md:py-24">
       <div className="grid items-center gap-10 lg:grid-cols-2">
-        <div className={cn("overflow-hidden rounded-2xl bg-mist lg:rounded-none", flipped && "lg:order-2")}>
+        <div className={cn("overflow-hidden rounded-2xl bg-mist", flipped && "lg:order-2")}>
           <img
             src={service.image}
             alt={service.imageAlt}
