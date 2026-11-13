@@ -256,12 +256,12 @@ export const services: Service[] = [
   },
   {
     slug: "ai-video",
-    title: "AI Promotional Video Production",
+    title: "AI UGC",
     short: "Promotional films, product stories and reels produced with modern AI workflows.",
     description:
       "Not every offer can wait for a full production crew. We create AI-assisted promotional videos, commercials, product films, social reels and explainers that tell the story clearly and look fit for paid media. The idea still starts with your business — the tools simply get it finished faster.",
     includes: [
-      "AI Promotional Videos",
+      "AI UGC Videos",
       "Business Commercials",
       "Product Advertisement Videos",
       "Social Media Reels",

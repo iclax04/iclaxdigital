@@ -27,10 +27,10 @@ export function Eyebrow({ children }: { children: ReactNode }) {
 }
 
 export const btnPrimary =
-  "inline-flex min-h-11 items-center justify-center rounded-md bg-ink px-6 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-charcoal";
+  "inline-flex min-h-11 items-center justify-center bg-ink px-6 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-charcoal";
 
 export const btnGhost =
-  "inline-flex min-h-11 items-center justify-center rounded-md border border-ink/20 bg-white px-6 text-center text-sm font-semibold text-ink transition-colors duration-200 hover:border-ink hover:bg-ink hover:text-white";
+  "inline-flex min-h-11 items-center justify-center border border-ink bg-white px-6 text-center text-sm font-semibold text-ink transition-colors duration-200 hover:bg-ink hover:text-white";
 
 export const btnOnGreen =
   "inline-flex min-h-11 items-center justify-center rounded-md bg-gold px-6 text-center text-xs font-semibold uppercase tracking-widest text-ink transition-colors duration-200 hover:bg-gold-bright";
