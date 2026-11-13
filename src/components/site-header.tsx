@@ -62,14 +62,13 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <a
-            href={contactWhatsApp}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            to="/"
+            hash="pricing"
             className="text-sm font-medium text-ink transition-colors hover:text-gold"
           >
-            Contact Us
-          </a>
+            Pricing
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">

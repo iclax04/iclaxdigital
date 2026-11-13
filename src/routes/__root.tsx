@@ -48,18 +48,13 @@ function RootComponent() {
   return (
     <html lang="en" className="antialiased" suppressHydrationWarning>
       <head>
-        <style
-          dangerouslySetInnerHTML={{
-            __html:
-              "html,body{margin:0;background:#f7f5f1;color:#243447;font-family:Manrope,system-ui,sans-serif}",
-          }}
-        />
-        <link rel="stylesheet" href={appCss} precedence="default" />
+        <style dangerouslySetInnerHTML={{ __html: "html{visibility:hidden}" }} />
+        <link rel="stylesheet" href={appCss} />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Manrope:wght@400;500;600;700;800&display=swap"
-          precedence="default"
+          href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Manrope:wght@400;500;600;700;800&display=block"
         />
+        <style dangerouslySetInnerHTML={{ __html: "html{visibility:visible;background:#f7f5f1;color:#243447}" }} />
         <HeadContent />
       </head>
       <body>
