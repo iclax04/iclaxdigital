@@ -147,7 +147,7 @@ function ServicesPage() {
       <Container>
         {offered.map((service, index) => (
           <article key={service.id} id={service.id} className="scroll-mt-28 border-t border-line py-16 md:py-24">
-            <div className="max-w-3xl lg:max-w-4xl">
+            <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-widest text-gold">
                 {String(index + 1).padStart(2, "0")}
               </p>

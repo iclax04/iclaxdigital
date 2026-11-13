@@ -164,10 +164,10 @@ function Home() {
         <Container>
           <h2 className="font-logo text-3xl font-bold leading-snug text-ink sm:text-4xl">Pricing</h2>
           <div className="mt-8 overflow-x-auto">
-            <table className="w-full min-w-[32rem] border-collapse text-left text-sm text-ink md:min-w-0">
+            <table className="w-full min-w-[36rem] border-collapse text-left text-sm text-ink md:min-w-0">
               <thead>
                 <tr className="border-b border-line">
-                  <th className="sticky left-0 bg-white py-3 pr-3 font-display text-base font-bold md:py-4 md:pr-4">Services</th>
+                  <th className="py-4 pr-4 font-display text-base font-bold">Services</th>
                   <th className="px-3 py-4 text-center font-display text-base font-bold">Starter</th>
                   <th className="px-3 py-4 text-center font-display text-base font-bold">
                     <span className="inline-flex items-center justify-center gap-1">
@@ -181,7 +181,7 @@ function Home() {
               <tbody>
                 {comparison.map((row) => (
                   <tr key={row.feature} className="border-b border-line">
-                    <th className="sticky left-0 bg-white py-3 pr-3 text-left text-sm font-medium text-ink md:py-4 md:pr-4">{row.feature}</th>
+                    <th className="py-4 pr-4 text-left text-sm font-medium text-ink">{row.feature}</th>
                     {(["starter", "growth", "premium"] as const).map((plan) => (
                       <td
                         key={plan}
@@ -211,7 +211,7 @@ function Home() {
               See all industries
             </Link>
           </div>
-          <ul className="mt-12 grid grid-cols-2 gap-3 lg:grid-cols-4">
+          <ul className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
             {industries.map((industry) => (
               <li key={industry.title}>
                 <Link to="/industries" className="group relative block aspect-[3/4] overflow-hidden bg-ink md:aspect-[4/5]">
@@ -221,7 +221,7 @@ function Home() {
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
-                  <h3 className="absolute inset-x-0 bottom-0 p-4 font-display text-xl font-bold text-white md:text-2xl">
+                  <h3 className="absolute inset-x-0 bottom-0 p-4 font-display text-2xl font-bold text-white">
                     {industry.title}
                   </h3>
                 </Link>
@@ -256,9 +256,9 @@ function Home() {
       </section>
 
       <section className="border-y border-line bg-white" aria-label="What ICLAX stands for">
-        <ul className="mx-auto grid max-w-6xl sm:grid-cols-2 lg:grid-cols-5">
+        <ul className="mx-auto grid max-w-6xl sm:grid-cols-2 md:grid-cols-5">
           {values.map((value) => (
-            <li key={value.letter} className="border-t border-line px-6 py-8">
+            <li key={value.letter} className="border-t border-line px-6 py-8 sm:border-t-0 md:border-l md:first:border-l-0">
               <span className="font-logo text-3xl font-bold text-ink">{value.letter}</span>
               <h3 className="mt-3 text-sm font-semibold text-ink">{value.word}</h3>
               <p className="mt-2 text-sm leading-relaxed text-quiet">{value.text}</p>
