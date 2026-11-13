@@ -17,6 +17,8 @@ const analyticsId = /^G-[A-Z0-9]+$/i.test(tracking.googleAnalyticsId)
   ? tracking.googleAnalyticsId
   : "";
 
+const cssHref = import.meta.env.DEV ? `${appCss}?direct` : appCss;
+
 export const Route = createRootRoute({
   head: () => ({
     meta: [
@@ -48,13 +50,11 @@ function RootComponent() {
   return (
     <html lang="en" className="antialiased" suppressHydrationWarning>
       <head>
-        <style dangerouslySetInnerHTML={{ __html: "html{visibility:hidden}" }} />
-        <link rel="stylesheet" href={appCss} />
+        <link rel="stylesheet" href={cssHref} />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Manrope:wght@400;500;600;700;800&display=block"
         />
-        <style dangerouslySetInnerHTML={{ __html: "html{visibility:visible;background:#f7f5f1;color:#243447}" }} />
         <HeadContent />
       </head>
       <body>
