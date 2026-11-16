@@ -8,11 +8,6 @@ export function getRouter() {
     routeTree,
     rewrite: previewPathRewrite(),
     defaultErrorComponent: AppErrorComponent,
+    scrollRestoration: true,
   });
-}
-
-declare module "@tanstack/react-router" {
-  interface Register {
-    router: ReturnType<typeof getRouter>;
-  }
 }

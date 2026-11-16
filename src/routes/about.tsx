@@ -1,121 +1,95 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { CtaBand } from "@/components/cta-band";
-import { btnPrimary, Container, Eyebrow, pageMeta } from "@/components/ui";
-import { reasons, values } from "@/lib/site";
+import { CtaBand, SiteShell, btnPrimary } from "@/components/site/chrome";
+import { VALUES, pageHead } from "@/lib/site";
 
 export const Route = createFileRoute("/about")({
   head: () =>
-    pageMeta(
-      "About Us | ICLAX DIGITAL",
-      "ICLAX Digital is a digital growth agency helping businesses establish an online presence and compete with clarity.",
-    ),
+    pageHead({
+      title: "About ICLAX Digital | Digital Marketing Agency",
+      description:
+        "ICLAX Digital helps businesses build stronger online visibility and sustainable digital growth through SEO, paid advertising, social media and AI-powered creative work.",
+      path: "/about",
+    }),
   component: AboutPage,
 });
 
 function AboutPage() {
   return (
-    <main id="content">
-      <section className="bg-white">
-        <Container className="grid items-center gap-10 py-16 lg:grid-cols-2 lg:py-24">
+    <SiteShell>
+      <section className="border-b border-line bg-white">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-2 md:px-8 md:py-20">
           <div>
-            <Eyebrow>About us</Eyebrow>
-            <h1 className="font-display text-5xl font-extrabold leading-tight text-ink md:text-6xl">
+            <p className="eyebrow">About us</p>
+            <h1 className="mt-4 font-logo text-4xl font-bold leading-tight text-ink sm:text-5xl">
               A team for businesses that want to grow.
             </h1>
-            <p className="mt-6 text-base leading-relaxed text-quiet md:text-lg">
-              ICLAX Digital helps businesses attract customers, build a stronger online brand and compete in a market where people decide on a phone — often before they walk in.
-            </p>
           </div>
           <img
-            src="/images/ng-founders.jpg"
-            alt="Two businesswomen working with laptops"
-            className="aspect-[4/3] w-full rounded-3xl object-cover"
+            src="/images/ng-office.jpg"
+            alt="Two professionals working together in an office"
+            width={1400}
+            height={933}
+            className="aspect-[4/3] w-full object-cover"
           />
-        </Container>
+        </div>
       </section>
 
-      <section className="bg-paper">
-        <Container className="grid gap-12 py-20 md:grid-cols-12 md:py-28">
-          <div className="md:col-span-4">
-            <Eyebrow>Who we are</Eyebrow>
-            <h2 className="font-display text-4xl leading-tight text-ink md:text-5xl">
-              One team for the work that used to be split five ways.
-            </h2>
-          </div>
-          <div className="space-y-5 text-base leading-relaxed text-body md:col-span-8">
-            <p>
-              Most businesses do not need another tool. They need a partner who can see the whole picture: how the website reads, how the ads are aimed, how the Google profile looks at 9pm, and whether the creative still sounds like the company.
-            </p>
-            <p>
-              We work with small and medium-sized businesses, startups, real estate companies, hotels and restaurants, fashion brands, retailers and corporate teams that want a stronger public presence. The work is local to each market. The standard is international.
-            </p>
-            <p>
-              We do not publish prices. After we understand the business, we prepare a quotation for the actual scope — not a package that pretends every company is the same.
-            </p>
-          </div>
-        </Container>
+      <section className="mx-auto max-w-3xl px-5 py-16 md:px-8 md:py-20">
+        <h2 className="font-logo text-3xl font-bold text-ink">Who we are</h2>
+        <div className="mt-6 space-y-5 text-base leading-relaxed text-body">
+          <p>
+            ICLAX Digital is a digital marketing agency focused on helping businesses build stronger online visibility and achieve sustainable digital growth.
+          </p>
+          <p>
+            We combine strategic marketing, search engine optimisation, paid advertising, social media management and AI-powered creative solutions to help businesses connect with their target audiences.
+          </p>
+          <p>
+            Our approach is built around understanding each business, developing effective strategies and continuously improving digital performance.
+          </p>
+          <p className="text-quiet">
+            Most businesses do not need another tool. They need a partner who can see the whole picture: how the website reads, how the ads are aimed, how the Google profile looks in the evening, and whether the creative still sounds like the company.
+          </p>
+        </div>
+        <Link to="/why-us" className={`${btnPrimary} mt-8`}>
+          Read why us
+        </Link>
       </section>
 
-      <section className="bg-ink text-white">
-        <Container className="grid gap-10 py-16 md:grid-cols-2 md:py-20">
-          <article>
-            <p className="text-xs font-semibold uppercase tracking-widest text-gold">Our mission</p>
-            <p className="mt-4 font-display text-3xl font-bold leading-snug">
+      <section className="border-y border-line bg-white">
+        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-2 md:px-8">
+          <div>
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-gold">Our mission</h2>
+            <p className="mt-4 text-lg leading-relaxed text-ink">
               To empower businesses with innovative digital solutions that improve visibility, strengthen customer relationships and drive business growth.
             </p>
-          </article>
-          <article>
-            <p className="text-xs font-semibold uppercase tracking-widest text-gold">Our vision</p>
-            <p className="mt-4 font-display text-3xl font-bold leading-snug">
+          </div>
+          <div>
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-gold">Our vision</h2>
+            <p className="mt-4 text-lg leading-relaxed text-ink">
               To become a trusted digital growth partner for businesses.
             </p>
-          </article>
-        </Container>
-      </section>
-
-      <section className="bg-paper">
-        <Container className="py-20 md:py-28">
-          <Eyebrow>Our values</Eyebrow>
-          <h2 className="max-w-xl font-display text-4xl leading-tight text-ink md:text-6xl">
-            The name is the brief.
-          </h2>
-          <ul className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {values.map((value) => (
-              <li key={value.word} className="border-t border-mist pt-5">
-                <p className="font-display text-4xl font-extrabold text-gold">{value.letter}</p>
-                <h3 className="mt-3 text-lg text-ink">{value.word}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-quiet">{value.text}</p>
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
-
-      <section className="bg-paper">
-        <Container className="py-20 md:py-28">
-          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div className="max-w-xl">
-              <Eyebrow>Why choose ICLAX Digital</Eyebrow>
-              <h2 className="font-display text-4xl leading-tight text-ink md:text-5xl">
-                A shorter list of reasons to stay.
-              </h2>
-            </div>
-            <Link to="/why-us" className={btnPrimary}>
-              Read why us
-            </Link>
           </div>
-          <ul className="mt-12 grid gap-6 md:grid-cols-2">
-            {reasons.slice(0, 4).map((reason) => (
-              <li key={reason.title} className="border border-mist p-6">
-                <h3 className="text-lg text-ink">{reason.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-quiet">{reason.text}</p>
+        </div>
+      </section>
+
+      <section className="bg-paper" aria-labelledby="values-heading">
+        <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
+          <h2 id="values-heading" className="font-logo text-3xl font-bold text-ink">The name is the brief.</h2>
+          <ul className="mt-8 grid gap-4 md:grid-cols-5">
+            {VALUES.map((value) => (
+              <li key={value.letter} className="border border-line bg-white p-5">
+                <span className="font-logo text-3xl font-bold text-ink">{value.letter}</span>
+                <h3 className="mt-3 text-sm font-semibold text-ink">{value.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-quiet">{value.body}</p>
               </li>
             ))}
           </ul>
-        </Container>
+        </div>
       </section>
-
-      <CtaBand title="Let's build something great together." text="Tell us about the business. We will tell you what we would do first, and what that work would cost — privately, not on a public price list." />
-    </main>
+      <CtaBand
+        title="Let’s build something considered."
+        body="Tell us about the business. We will tell you what we would do first, and prepare a quotation privately."
+      />
+    </SiteShell>
   );
 }

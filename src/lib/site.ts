@@ -1,443 +1,387 @@
-export const brand = {
-  name: "ICLAX DIGITAL",
-  short: "ICLAX",
-  tagline: "Innovating your digital growth.",
-  headline: "Let's grow your business beyond limits.",
-  support:
-    "Your business deserves to be seen. At ICLAX Digital, we help Nigerian businesses attract customers, build powerful online brands and grow through innovative digital marketing and technology solutions.",
-};
-
-export const cities = ["Lagos", "Abuja", "Port Harcourt", "Kano", "Ibadan", "Enugu", "Nationwide"];
-
-export const growthPoints = [
-  {
-    title: "Discovery",
-    text: "Appear when a customer in your city searches Google or opens Maps for the service you offer.",
-  },
-  {
-    title: "Reputation",
-    text: "A consistent presence on Instagram, Facebook and TikTok, where people judge a business before they visit.",
-  },
-  {
-    title: "Enquiry",
-    text: "A clear route from that attention to a call, a form, or a WhatsApp message your team can answer.",
-  },
-  {
-    title: "Decision",
-    text: "A website that states the offer plainly, so the right customer can choose you with confidence.",
-  },
-];
-
-/**
- * Replace these with the agency's real contact details before going live.
- * They are intentionally shown on the site so the buttons work today.
- */
-export const contact = {
-  email: "hello@iclaxdigital.com",
+export const SITE = {
+  name: "ICLAX Digital",
+  legalName: "ICLAX DIGITAL",
+  url: "https://www.iclaxdigital.com",
+  email: "contact@iclaxdigital.com",
   phoneDisplay: "+234 814 326 0133",
   phoneTel: "+2348143260133",
   whatsapp: "2348143260133",
-  location: "Nigeria",
-  /**
-   * Optional form inbox. Paste a Formspree (or similar) endpoint to receive
-   * enquiries directly. Leave empty to send each enquiry through WhatsApp
-   * and email instead.
-   */
-  formEndpoint: "",
-  socials: [
-    { label: "Instagram", href: "https://instagram.com/iclaxdigital" },
-    { label: "Facebook", href: "https://facebook.com/iclaxdigital" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/company/iclaxdigital" },
-    { label: "TikTok", href: "https://www.tiktok.com/@iclaxdigital" },
-    { label: "YouTube", href: "https://www.youtube.com/@iclaxdigital" },
-  ],
-};
+  slogan: "Innovating your digital growth.",
+} as const;
 
-/** Leave blank until the real IDs are issued. Nothing loads while these are empty. */
-export const tracking = {
-  googleAnalyticsId: "",
-  googleSiteVerification: "",
-};
+export const WA_GENERAL =
+  "Hello ICLAX Digital, I would like to talk about my business.";
 
-export function whatsappHref(message: string) {
-  return `https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(message)}`;
+export function waLink(text: string) {
+  return `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(text)}`;
 }
 
-export const contactWhatsApp = whatsappHref(
-  "Hello ICLAX Digital, I would like to talk about my business.",
-);
+export const NAV = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/services", label: "Our Services" },
+  { href: "/industries", label: "Industries" },
+  { href: "/work", label: "Our Work" },
+] as const;
 
-export function mailtoHref(subject: string, body: string) {
-  return `mailto:${contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
+export const SOCIAL = [
+  { href: "https://facebook.com/iclaxdigital", label: "Facebook" },
+  { href: "https://www.tiktok.com/@iclaxdigital", label: "TikTok" },
+] as const;
+
+export type ServiceIcon = "megaphone" | "search" | "pin" | "share" | "clapper";
 
 export type Service = {
-  slug: string;
+  id: string;
   title: string;
-  short: string;
-  description: string;
-  includes: string[];
-  benefits: string[];
-  image: string;
-  imageAlt: string;
+  summary: string;
+  icon: ServiceIcon;
+  tone: "ink" | "paper";
+  body: string;
+  handle: string[];
+  matters: string[];
 };
 
-export const services: Service[] = [
+export const SERVICES: Service[] = [
   {
-    slug: "google-ads",
+    id: "google-ads",
     title: "Google Ads Management",
-    short: "Search, Display and YouTube campaigns built around the customers already looking for you.",
-    description:
-      "Google Ads puts your business in front of people at the moment they are searching, watching or browsing. We handle the structure, the keywords, the creative and the measurement so media spend has a job to do. Campaigns are scoped to your offer and your market. There is no public price list — ask us for a quotation prepared for your business.",
-    includes: [
-      "Google Search Ads",
-      "Google Display Advertising",
-      "YouTube Ads",
-      "Keyword Research",
-      "Campaign Setup",
-      "Campaign Optimisation",
-      "Conversion Tracking",
-      "Performance Reporting",
+    summary:
+      "Strategic Google advertising campaigns designed to reach potential customers actively searching for your products and services.",
+    icon: "megaphone",
+    tone: "ink",
+    body: "Google Ads puts a business in front of people at the moment they are searching, watching or browsing. We structure campaigns, choose keywords, prepare creative and measure which clicks become enquiries. Management fees are quoted for the work. Media spend is separate and agreed with you before anything is spent.",
+    handle: [
+      "Search, Display and YouTube campaign structure",
+      "Keyword research and campaign setup",
+      "Creative prepared for the offer",
+      "Conversion tracking and clear reporting",
     ],
-    benefits: [
-      "Reach people while they are actively looking",
-      "A campaign structure matched to your offer",
-      "Tracking that shows which enquiries came from ads",
-      "Ongoing optimisation and plain-language reports",
+    matters: [
+      "You reach people while they are already looking",
+      "Spend is discussed against an enquiry, not only a click",
+      "The account is managed against a written scope",
     ],
-    image: "/images/ng-abuja-laptop.jpg",
-    imageAlt: "A Nigerian woman in Abuja working on a laptop",
   },
   {
-    slug: "websites",
-    title: "Website Design & Development",
-    short: "Fast, mobile-ready websites that make a business look as serious as it is.",
-    description:
-      "Your website is often the first meeting with a customer. We design and build business, corporate, ecommerce, portfolio and landing sites that load quickly, read clearly on a phone and make the next step obvious — a call, a WhatsApp message or an enquiry. Redesigns and ongoing care are part of the same practice.",
-    includes: [
-      "Business Websites",
-      "Corporate Websites",
-      "E-commerce Websites",
-      "Landing Pages",
-      "Portfolio Websites",
-      "Mobile-Responsive Design",
-      "Website Redesign",
-      "Website Maintenance",
-    ],
-    benefits: [
-      "A credible first impression on every screen",
-      "Clear paths to call, WhatsApp or enquire",
-      "A structure your team can grow with",
-      "Design that belongs to your brand, not a template",
-    ],
-    image: "/images/ng-lagos-desk.jpg",
-    imageAlt: "A Lagos entrepreneur working at a laptop in a bright office",
-  },
-  {
-    slug: "seo",
+    id: "seo",
     title: "Search Engine Optimisation (SEO)",
-    short: "Technical, on-page and local SEO so the right people can find you on Google.",
-    description:
-      "Search is a long game we play with care. We audit the site, fix what blocks visibility, align pages with the words your customers actually use and strengthen your presence in local results. You get a plan you can follow, not a pile of jargon.",
-    includes: [
-      "Technical SEO",
-      "On-page SEO",
-      "Keyword Research",
-      "Website Audits",
-      "Local SEO",
-      "Content Optimisation",
-      "Google Search Visibility",
+    summary:
+      "Improve your website’s visibility on search engines through keyword research, on-page optimisation, technical SEO and content strategies.",
+    icon: "search",
+    tone: "paper",
+    body: "Search engine optimisation is the work of making the right pages visible when people search for what you sell. We look at technical issues that block a site, the words customers actually type, and the pages that should answer them. Local SEO is part of the same job when enquiries start near a place of business.",
+    handle: [
+      "Technical SEO that affects visibility",
+      "On-page optimisation for the pages that matter",
+      "Keyword research based on real demand",
+      "Local SEO for customers near the business",
+      "Content recommendations tied to the offer",
     ],
-    benefits: [
-      "Problems found before they quietly cost you traffic",
-      "Pages written around real search demand",
-      "Stronger visibility for customers near you",
-      "Recommendations you can act on",
+    matters: [
+      "Search visibility does not stop when an ad is paused",
+      "Pages can match the way customers describe the offer",
+      "You can see what was changed and why",
     ],
-    image: "/images/ng-abuja-desk.jpg",
-    imageAlt: "A Nigerian woman working at her desk in Abuja",
   },
   {
-    slug: "social-media",
-    title: "Social Media Management",
-    short: "Consistent content, design and replies across the platforms your customers already use.",
-    description:
-      "A quiet page does not build a brand. We plan, design and publish for Facebook, Instagram, TikTok and LinkedIn, then stay close to the comments and messages that turn attention into conversation. The voice stays yours. The calendar stays full.",
-    includes: [
-      "Facebook Management",
-      "Instagram Management",
-      "TikTok Management",
-      "LinkedIn Management",
-      "Content Creation",
-      "Graphic Design",
-      "Promotional Videos",
-      "Content Scheduling",
-      "Audience Engagement",
-    ],
-    benefits: [
-      "A presence that does not go quiet between campaigns",
-      "Creative made for each platform, not resized leftovers",
-      "Scheduling handled so you can run the business",
-      "Replies that keep the relationship warm",
-    ],
-    image: "/images/ng-abuja-cafe.jpg",
-    imageAlt: "A young Nigerian woman in an Abuja cafe",
-  },
-  {
-    slug: "meta-ads",
-    title: "Facebook & Instagram Advertising",
-    short: "Lead, message and sales campaigns with audiences, creative and retargeting in one place.",
-    description:
-      "Meta advertising is where many customers discover a business and decide to message it. We build Facebook and Instagram campaigns for leads, WhatsApp conversations and sales, then refine the audiences and the creative from what the numbers show. Retargeting keeps you in front of people who already looked.",
-    includes: [
-      "Facebook Ads",
-      "Instagram Ads",
-      "Lead Generation",
-      "WhatsApp Advertising",
-      "Sales Campaigns",
-      "Audience Targeting",
-      "Retargeting",
-      "Campaign Optimisation",
-    ],
-    benefits: [
-      "Campaigns pointed at leads, messages or sales",
-      "Audiences shaped around who actually buys",
-      "Retargeting for people who already showed interest",
-      "Creative and media managed together",
-    ],
-    image: "/images/ng-founders.jpg",
-    imageAlt: "Two Nigerian businesswomen in Lagos holding laptops",
-  },
-  {
-    slug: "google-business",
+    id: "google-business",
     title: "Google Business Profile Management",
-    short: "A complete Google profile so you can be found, trusted and chosen on Maps.",
-    description:
-      "When someone searches for a service nearby, your Google Business Profile is often the listing they judge first. We set it up, keep the details accurate, strengthen how you appear on Maps and support the way reviews are handled. Local search should not be an afterthought.",
-    includes: [
-      "Business Profile Setup",
-      "Profile Optimisation",
-      "Google Maps Visibility",
-      "Business Information Management",
-      "Review Management Support",
-      "Local Search Optimisation",
+    summary:
+      "Help local businesses improve their Google visibility, manage their business profiles and attract more local customers.",
+    icon: "pin",
+    tone: "ink",
+    body: "When someone searches for a service nearby, a Google Business Profile is often the first thing they judge. We set the profile up properly, keep the name, category, hours, services and photos accurate, and strengthen how the business appears on Google and Maps. Reviews are handled with care so the listing looks complete rather than abandoned.",
+    handle: [
+      "Profile setup and category selection",
+      "Hours, services and contact details kept accurate",
+      "Photos and posts that show the real business",
+      "Google Maps visibility",
+      "Guidance on how reviews are handled",
     ],
-    benefits: [
-      "A profile that looks complete and trustworthy",
-      "A better chance of appearing in local results",
-      "Hours, services and photos kept up to date",
-      "Support for the reputation you are building",
+    matters: [
+      "Local customers can find the business before a competitor",
+      "A complete profile is easier to trust",
+      "Local searches can lead to calls and direction requests",
     ],
-    image: "/images/ng-market.jpg",
-    imageAlt: "A Nigerian woman at a busy market in Lagos",
   },
   {
-    slug: "branding",
-    title: "Branding & Graphic Design",
-    short: "Identity, logos and marketing graphics that look consistent everywhere you show up.",
-    description:
-      "A brand is the set of decisions people recognise. We design logos, identity systems, flyers, banners and the guidelines that keep them consistent — on a website, a social post, a shopfront banner or a proposal. The aim is a look that feels established, not assembled overnight.",
-    includes: [
-      "Logo Design",
-      "Brand Identity",
-      "Promotional Flyers",
-      "Business Banners",
-      "Marketing Graphics",
-      "Brand Guidelines",
+    id: "social-media",
+    title: "Social Media Management",
+    summary:
+      "Build a stronger online presence through strategic content creation, account management and audience engagement.",
+    icon: "share",
+    tone: "paper",
+    body: "A quiet page does not build recognition. Social media management covers the plan, the posts and the accounts they appear on: content in the business’s own voice, publishing into the right profiles, and attention to the comments and messages that turn a view into a conversation.",
+    handle: [
+      "Content planned around the offer and the audience",
+      "Design and captions prepared for the platform",
+      "Account management so profiles stay in order",
+      "Engagement with comments and messages within the agreed scope",
     ],
-    benefits: [
-      "A look people can recognise across web, social and print",
-      "Files your team can actually use",
-      "Design that feels considered, not generic",
-      "One visual system instead of mismatched assets",
+    matters: [
+      "Customers see the business between campaigns",
+      "The offer stays visible without daily effort from the owner",
+      "Creative and replies can sound like the company",
     ],
-    image: "/images/ng-fashion.jpg",
-    imageAlt: "A fashion portrait photographed in a Lagos studio",
   },
   {
-    slug: "ai-video",
-    title: "AI UGC",
-    short: "Promotional films, product stories and reels produced with modern AI workflows.",
-    description:
-      "Not every offer can wait for a full production crew. We create AI-assisted promotional videos, commercials, product films, social reels and explainers that tell the story clearly and look fit for paid media. The idea still starts with your business — the tools simply get it finished faster.",
-    includes: [
-      "AI UGC Videos",
-      "Business Commercials",
-      "Product Advertisement Videos",
-      "Social Media Reels",
-      "Explainer Videos",
+    id: "ai-ugc",
+    title: "AI UGC Video Advertising",
+    summary:
+      "Create realistic, engaging AI-powered promotional videos designed to capture attention and promote products and services.",
+    icon: "clapper",
+    tone: "ink",
+    body: "AI UGC videos are short, direct films that can feel like a person recommending the business, rather than a commercial that never gets watched. We use them for product stories, offers, explainers and social films that can run on a page or in an ad. The idea still starts with what you sell and who it is for.",
+    handle: [
+      "Scripts built around the offer",
+      "Promotional videos prepared for social pages and ads",
+      "Product and service stories told plainly",
+      "Cuts agreed before they are published",
     ],
-    benefits: [
-      "Campaign films without a heavy production schedule",
-      "Cuts prepared for reels, ads and websites",
-      "Product and offer stories told in plain pictures",
-      "A faster path from idea to something you can run",
+    matters: [
+      "A video can explain an offer faster than a caption",
+      "Production does not depend on a full crew for every film",
+      "The number and use of films are agreed in the scope",
     ],
-    image: "/images/ng-ai-video.jpg",
-    imageAlt: "A Nigerian creator producing a promotional video with a cinema camera and editing screen",
   },
 ];
 
-export function getService(slug: string) {
-  return services.find((service) => service.slug === slug);
-}
+export const MARKETS = [
+  "United States",
+  "United Kingdom",
+  "Canada",
+  "Australia",
+  "Nigeria",
+  "Worldwide",
+] as const;
 
-export const values = [
+export const INDUSTRIES = [
+  {
+    slug: "real-estate",
+    title: "Real estate",
+    image: "/images/ind-estate.jpg",
+    alt: "A limestone townhouse terrace on a London street",
+    body: "Agencies and developments need to be found on Google and Maps, and explained clearly before anyone books a viewing.",
+  },
+  {
+    slug: "hotels",
+    title: "Hotels",
+    image: "/images/ind-hotel.jpg",
+    alt: "A hotel lobby with tall windows and a stone reception desk",
+    body: "Guests compare photos, location and reviews before they enquire. A complete profile and a clear website make that comparison easier.",
+  },
+  {
+    slug: "fashion",
+    title: "Fashion",
+    image: "/images/ind-fashion.jpg",
+    alt: "A woman browsing a clothing rail in a Paris boutique",
+    body: "Fashion brands are judged on the work itself. Social content, search and a credible site should feel specific to the label.",
+  },
+  {
+    slug: "retail",
+    title: "Retail",
+    image: "/images/ind-retail.jpg",
+    alt: "A shopper in a timber retail shop",
+    body: "Shops and product businesses need to show what is for sale, where to find it, and how to ask a question without friction.",
+  },
+  {
+    slug: "restaurants",
+    title: "Restaurants",
+    image: "/images/ind-restaurant.jpg",
+    alt: "A linen-covered table in a city restaurant at night",
+    body: "A search, a map pin and a recent photo often decide the booking. The listing and the page should agree with each other.",
+  },
+  {
+    slug: "education",
+    title: "Education",
+    image: "/images/ind-education.jpg",
+    alt: "Students seated in a bright classroom",
+    body: "Schools and training businesses need plain pages that answer what is taught, who it is for, and how to enrol.",
+  },
+  {
+    slug: "technology",
+    title: "Technology",
+    image: "/images/ind-technology.jpg",
+    alt: "Two colleagues in a glass office overlooking a city skyline",
+    body: "Technology companies are often explained too vaguely. The site, the ads and the profile should say what the product actually does.",
+  },
+  {
+    slug: "professional-services",
+    title: "Professional services",
+    image: "/images/ind-professional.jpg",
+    alt: "A man in a navy suit in an office overlooking Sydney Harbour",
+    body: "Firms selling expertise need to look established and make the first conversation easy to start.",
+  },
+] as const;
+
+export const WORK = [
+  {
+    id: "gbp",
+    title: "Google Business Profile Optimisation",
+    note: "A beauty salon profile in the manager view, with interior photos, contact actions and the main sections in place. The business name is covered.",
+    image: "/images/gbp-salon.jpg",
+    alt: "Manager view of a beauty salon Google Business Profile, with salon photos and contact buttons",
+  },
+  {
+    id: "seo",
+    title: "SEO Projects",
+    note: "Search appearance for a local beauty salon: the snippet, the queries the page is written for, and the on-page checks.",
+    image: "/images/seo-project.jpg",
+    alt: "An SEO project sheet showing the search snippet and on-page checks for a local beauty salon",
+  },
+  {
+    id: "ads",
+    title: "Google Ads Campaigns",
+    note: "A search campaign for the same local salon: the ad, three ad groups and the settings. Spend and results are not shown.",
+    image: "/images/ads-project.jpg",
+    alt: "A Google Ads project sheet for a local beauty salon search campaign",
+  },
+  {
+    id: "video",
+    title: "AI UGC Video Advertising",
+    note: "A Christmas film for hotels, supermarkets, restaurants and fashion businesses. It asks owners to get the business in front of more customers before the season passes.",
+    media: "/videos/ai-ugc-christmas.mp4",
+    poster: "/images/ai-ugc-poster.jpg",
+  },
+  {
+    id: "social",
+    title: "Social Media Marketing",
+    note: "A week of Instagram and Facebook posts for the salon, with the voice and the reply plan. Follower counts are not shown.",
+    image: "/images/social-project.jpg",
+    alt: "A one-week social media plan for a local beauty salon",
+  },
+] as const;
+
+export const VALUES = [
   {
     letter: "I",
-    word: "Innovation",
-    text: "We look for the sharper way to solve a commercial problem, not the noisiest one.",
+    title: "Innovation",
+    body: "We look for the sharper way to solve a commercial problem, not the noisiest one.",
   },
   {
     letter: "C",
-    word: "Creativity",
-    text: "Ideas should feel specific to the business in front of us, not borrowed from a template.",
+    title: "Creativity",
+    body: "Ideas should feel specific to the business in front of us, not borrowed from a template.",
   },
   {
     letter: "L",
-    word: "Leadership",
-    text: "We recommend a direction and stand behind it. We do not disappear after the brief.",
+    title: "Leadership",
+    body: "We recommend a direction and stand behind it. We do not disappear after the brief.",
   },
   {
     letter: "A",
-    word: "Advertising",
-    text: "Media is spent against a goal, then explained in language a founder can use.",
+    title: "Advertising",
+    body: "Media is spent against a goal, then explained in language a founder can use.",
   },
   {
     letter: "X",
-    word: "Excellence",
-    text: "The details of a page, a profile and a campaign are the brand. We treat them that way.",
+    title: "Excellence",
+    body: "The details of a page, a profile and a campaign are the brand. We treat them that way.",
   },
-];
+] as const;
 
-export const reasons = [
+export const WHY = [
   {
     title: "Professional digital marketing strategies",
-    text: "Plans are written around your market, your offer and the result you actually need — leads, bookings, sales or a stronger reputation.",
+    body: "Plans are written around your market, your offer and the result you actually need — leads, bookings, sales or a stronger reputation.",
   },
   {
     title: "Creative and modern solutions",
-    text: "Design, websites and campaigns are made to feel current and specific, so the business looks established from the first impression.",
+    body: "Design and campaigns are made to feel current and specific, so the business looks established from the first impression.",
   },
   {
     title: "Customer-focused approach",
-    text: "We start with how your customer decides, then build the message, the page and the media around that decision.",
+    body: "We start with how your customer decides, then build the message, the page and the media around that decision.",
   },
   {
     title: "Data-driven advertising",
-    text: "Audiences, keywords and creative are adjusted from performance, not from guesswork dressed up as instinct.",
+    body: "Audiences, keywords and creative are adjusted from performance, not from guesswork dressed up as instinct.",
   },
   {
     title: "Transparent performance reporting",
-    text: "You see what ran, what it produced and what we recommend next. Reports are written to be read, not to impress.",
+    body: "You see what ran, what it produced and what we recommend next. Reports are written to be read, not to impress.",
   },
   {
-    title: "Affordable customised solutions",
-    text: "Scope is shaped to the business. We do not publish package prices — every quotation is prepared after we understand the work.",
+    title: "Customised scope",
+    body: "Every quotation is prepared after we understand the work. We do not publish package prices.",
   },
   {
     title: "Dedicated client support",
-    text: "You have people to speak to. Questions do not vanish into a shared inbox with no owner.",
+    body: "You have people to speak to. Questions do not vanish into a shared inbox with no owner.",
   },
   {
     title: "Multiple digital services under one roof",
-    text: "Ads, search, social, websites, profiles and creative can be planned together instead of fighting each other.",
+    body: "Ads, search, social, profiles and creative can be planned together instead of fighting each other.",
   },
-];
+] as const;
 
-export const process = [
-  {
-    n: "01",
-    title: "Discovery",
-    text: "We understand your business and objectives.",
-  },
-  {
-    n: "02",
-    title: "Strategy",
-    text: "We develop a suitable digital strategy.",
-  },
-  {
-    n: "03",
-    title: "Implementation",
-    text: "We execute the agreed services.",
-  },
-  {
-    n: "04",
-    title: "Optimisation",
-    text: "We monitor and improve performance.",
-  },
-  {
-    n: "05",
-    title: "Reporting",
-    text: "We provide progress reports and recommendations.",
-  },
-];
+export const COUNTRY_SUGGESTIONS = [
+  "United States",
+  "United Kingdom",
+  "Canada",
+  "Australia",
+  "Nigeria",
+  "Ireland",
+  "Germany",
+  "France",
+  "Netherlands",
+  "United Arab Emirates",
+  "South Africa",
+  "Ghana",
+  "Kenya",
+  "India",
+  "Singapore",
+] as const;
 
-export const industries = [
-  {
-    title: "Real estate",
-    image: "/images/ng-estate.jpg",
-    alt: "A classic residential building in Lagos",
-  },
-  {
-    title: "Hotels",
-    image: "/images/ng-hotel.jpg",
-    alt: "A hotel lobby",
-  },
-  {
-    title: "Fashion",
-    image: "/images/ng-classic-fashion.jpg",
-    alt: "A classic black and white fashion portrait in Lagos",
-  },
-  {
-    title: "Retail",
-    image: "/images/ng-boutique.jpg",
-    alt: "A woman in an Abuja boutique",
-  },
-  {
-    title: "Restaurants",
-    image: "/images/ng-dinner.jpg",
-    alt: "A formal dinner in Lagos",
-  },
-  {
-    title: "Education",
-    image: "/images/ng-classroom.jpg",
-    alt: "Nigerian students in a classroom",
-  },
-  {
-    title: "Technology",
-    image: "/images/ng-office.jpg",
-    alt: "Two professionals working together in a Lagos office",
-  },
-  {
-    title: "Professional services",
-    image: "/images/ng-abuja-boss.jpg",
-    alt: "A Nigerian businessman in a navy suit",
-  },
-];
+export function pageHead(opts: { title: string; description: string; path: string }) {
+  const url = opts.path === "/" ? `${SITE.url}/` : `${SITE.url}${opts.path}`;
+  return {
+    meta: [
+      { title: opts.title },
+      { name: "description", content: opts.description },
+      { name: "robots", content: "index, follow" },
+    ],
+    links: [{ rel: "canonical", href: url }],
+  };
+}
 
-export const samples = [
-  {
-    quote:
-      "They made the offer easier to understand, and the enquiries that followed were from people who already knew what we sold.",
-    who: "Sample client",
-    context: "Retail business, Lagos",
-  },
-  {
-    quote:
-      "Our pages finally matched the standard of the rooms. Guests could find us, see the place properly and book without a chase.",
-    who: "Sample client",
-    context: "Hotel",
-  },
-  {
-    quote:
-      "The campaigns stopped feeling random. We could see which messages brought serious buyers and which ones we should retire.",
-    who: "Sample client",
-    context: "Real estate company",
-  },
-];
-
-export const serviceOptions = [
-  ...services.map((service) => service.title),
-  "Not sure yet — advise me",
-];
+export function businessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: SITE.legalName,
+    url: SITE.url,
+    slogan: SITE.slogan,
+    email: SITE.email,
+    telephone: SITE.phoneTel,
+    image: `${SITE.url}/images/ng-founders.jpg`,
+    description:
+      "ICLAX Digital is a digital marketing agency helping small businesses, startups and established brands improve online visibility through Google Ads management, SEO, local SEO, Google Business Profile management, social media marketing and AI video advertising.",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "NG",
+    },
+    areaServed: [
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "United Kingdom" },
+      { "@type": "Country", name: "Canada" },
+      { "@type": "Country", name: "Australia" },
+      { "@type": "Country", name: "Nigeria" },
+    ],
+    sameAs: SOCIAL.map((item) => item.href),
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Digital marketing services",
+      itemListElement: SERVICES.map((service) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: service.title,
+          description: service.summary,
+          url: `${SITE.url}/services#${service.id}`,
+        },
+      })),
+    },
+  };
+}
