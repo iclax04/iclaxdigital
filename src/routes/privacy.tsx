@@ -35,7 +35,7 @@ function PrivacyPage() {
             If you submit the enquiry form, message us on WhatsApp, call or email, we receive the details you choose to send: your name, business name, email address, country, phone number if you provide one, the service you are asking about and your project details.
           </p>
           <p className="mt-3">
-            The site may also receive ordinary technical logs from the host, such as browser type and pages requested, which are used to keep the site reliable. No analytics tag is active on this website unless one is added later and described here.
+            The site may also receive ordinary technical logs from the host, such as browser type and pages requested, which are used to keep the site reliable. Google Tag Manager (GTM-MW8TJDKX) loads on each page and may send usage data, including pages visited, device type and approximate location, to Google Analytics.
           </p>
         </section>
         <section>

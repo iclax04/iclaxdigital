@@ -1,8 +1,26 @@
-import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
+import { createRootRoute, HeadContent, Outlet, Scripts, useRouterState } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { SiteShell } from "@/components/site/chrome";
 import appCss from "../styles.css?url";
+
+declare global {
+  interface Window {
+    dataLayer?: Record<string, unknown>[];
+  }
+}
+
+const GTM_ID = "GTM-MW8TJDKX";
+
+const gtmHeadScript = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());`;
 
 export const Route = createRootRoute({
   head: () => ({
@@ -14,6 +32,9 @@ export const Route = createRootRoute({
       { name: "apple-mobile-web-app-title", content: "ICLAX Digital" },
     ],
     links: [
+      { rel: "icon", href: "/favicon.ico", sizes: "any" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -23,12 +44,36 @@ export const Route = createRootRoute({
         href: "https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Manrope:wght@400;500;600;700;800&display=swap",
       },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
     ],
+    scripts: [{ children: gtmHeadScript }],
   }),
   component: RootComponent,
   notFoundComponent: NotFound,
 });
+
+function AnalyticsPageViews() {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  const searchStr = useRouterState({ select: (state) => state.location.searchStr });
+  const first = useRef(true);
+
+  useEffect(() => {
+    if (first.current) {
+      first.current = false;
+      return;
+    }
+    const dataLayer = (window.dataLayer = window.dataLayer || []);
+    dataLayer.push({
+      event: "page_view",
+      page_path: `${pathname}${searchStr}`,
+      page_location: window.location.href,
+      page_title: document.title,
+    });
+  }, [pathname, searchStr]);
+
+  return null;
+}
 
 function RootComponent() {
   return (
@@ -37,8 +82,18 @@ function RootComponent() {
         <HeadContent />
       </head>
       <body>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         <PreviewHostBridge />
         <AuthProvider>
+          <AnalyticsPageViews />
           <Outlet />
         </AuthProvider>
         <Scripts />
